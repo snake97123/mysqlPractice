@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -20,7 +20,16 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+             string Server = "localhost";
+            int Port = 3306;
+            string Database = "mysql";
+            string Uid = "root";
+            string Pwd = "設定したパスワード";
 
+            string ConnectionString = $"Server={Server}; Port={Port}; Database={Database}; Uid={Uid}; Pwd={Pwd}";
+
+            string SelectVersion = "SELECT version()";
+            
         }
     }
 }
