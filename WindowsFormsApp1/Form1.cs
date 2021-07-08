@@ -20,7 +20,9 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-             string Server = "localhost";
+
+            //接続情報
+            string Server = "localhost";
             int Port = 3306;
             string Database = "mysql";
             string Uid = "root";
@@ -29,6 +31,16 @@ namespace WindowsFormsApp1
             string ConnectionString = $"Server={Server}; Port={Port}; Database={Database}; Uid={Uid}; Pwd={Pwd}";
 
             string SelectVersion = "SELECT version()";
+
+            try
+            {
+                //コネクションオブジェクトとコマンドオブジェクトを生成。
+                 MySqlConnection conn = new MySqlConnection(ConnectionString);
+                 MySqlCommand command = new MySqlCommand()
+                
+
+            }
+           
             
         }
     }
